@@ -76,7 +76,14 @@ namespace calc
             }
             D = "=";
             n2 = true;
-            textBox1.Text = res.ToString("F5");     // добавляем вывод результата, и количество цифр после запятой
+            textBox1.Text = res.ToString("0.#####");     // добавляем вывод результата, и количество цифр после запятой 
+                                                         // исправлено, чтобы не было нулей в конце
+        }
+
+        private void button13_Click(object sender, EventArgs e)         // добавление функции для ","
+        {
+            if(!textBox1.Text.Contains(","))                            // чтобы не могло быть несколько запятых в одном числе
+                textBox1.Text = textBox1.Text + ",";
         }
     }
 }
