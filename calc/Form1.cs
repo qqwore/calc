@@ -16,5 +16,19 @@ namespace calc
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button B = (Button)sender;
+            if (textBox1.Text == "0")
+                textBox1.Text = B.Text;
+            else
+                textBox1.Text = textBox1.Text + B.Text;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+        }
     }
 }
